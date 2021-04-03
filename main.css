@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "MinimoLight";
+  src: url("fonts/MinimoLight.otf") format("opentype");
+}
+
+.minimo {
+  font-family: "MinimoLight";
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.start {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+}
+
+.start-backround {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.start .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.start .title .lplugins {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+  line-height: 55.2px;
+  padding-bottom: 1rem;
+  color: rgb(134, 134, 134);
+}
+
+.start .title .lplugins-subtitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 15px;
+  font-style: italic;
+  color: rgb(134, 134, 134);
+}
