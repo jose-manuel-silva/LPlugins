@@ -182,3 +182,22 @@ section:not(:first-child) {
 }
 
 /* End of Projects Section */
+
+/* Start of Contacts Section */
+
+.contacts {
+  text-align: center;
+}
+
+.icons img {
+  width: 10vmin;
+  margin-left: 5%;
+  margin-right: 5%;
+  transition: transform 0.2s;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+/* End of Contacts Section */
