@@ -12,6 +12,49 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+section > .title:first-of-type {
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+section:not(:first-child) {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.section-divider {
+  height: 2px;
+  width: 100vw;
+  max-width: 100%;
+  background-color: aqua;
+}
+
+.more {
+  background: linear-gradient(to bottom, aqua 0%, aqua 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  color: rgb(39, 39, 39);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-size 0.4s;
+}
+
+.more:hover {
+  background-size: 4px 50px;
+}
+
+.parenthesis {
+  color: rgb(39, 39, 39);
+  text-decoration: none;
+  font-weight: 500;
+}
+/* Start of Main Section Section */
+
 .start {
   position: relative;
   text-align: center;
@@ -51,19 +94,9 @@ body {
   color: rgb(134, 134, 134);
 }
 
-.aboutme {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 70px;
-  margin-bottom: 70px;
-}
+/* End of Main Section */
 
-.aboutme .title {
-  margin-bottom: 70px;
-  text-align: center;
-  font-size: 2em;
-  font-weight: 700;
-}
+/* Start of About Me Section */
 
 .info {
   display: inline-flex;
@@ -85,7 +118,13 @@ body {
   height: 200px;
   width: 200px;
   object-fit: cover;
+  border: 2px solid aqua;
   border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.info img:hover {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 600px) {
@@ -98,3 +137,48 @@ body {
     margin-bottom: 30px;
   }
 }
+
+/* End of About Me Section */
+
+/* Start of Projects Section */
+
+.cards {
+  display: flex;
+  flex: 1 2 30%;
+  flex-flow: row wrap;
+  flex-direction: row;
+}
+
+.card {
+  border: 2px solid aqua;
+  border-radius: 10px;
+  flex: 1 2 40%;
+  flex-flow: row wrap;
+  flex-direction: row;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card:not(:last-of-type) {
+  margin-right: 5%;
+}
+
+.card .title {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-weight: 600;
+}
+
+.card .description {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 1em;
+  font-weight: 500;
+  max-height: 2.5em;
+  max-width: 90%;
+}
+
+/* End of Projects Section */
