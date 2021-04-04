@@ -50,3 +50,51 @@ body {
   font-style: italic;
   color: rgb(134, 134, 134);
 }
+
+.aboutme {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.aboutme .title {
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.info {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.info .name {
+  font-weight: 600;
+}
+
+.info .description {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.info img {
+  margin-right: 5%;
+  flex-shrink: 0;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .info {
+    flex-direction: column;
+  }
+  .info img {
+    margin-right: unset;
+    align-self: center;
+    margin-bottom: 30px;
+  }
+}
