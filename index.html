@@ -21,11 +21,22 @@
     <!--JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/4.1.0/dotdotdot.min.js"></script>
+    <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
     <script src="./main.js"></script>
   </head>
 
   <body>
-    <section class="start">
+    <header class="header">
+      <div class="left">
+        <h1><a class="scroll" href="#start">LPlugins</a></h1>
+      </div>
+      <div class="right">
+        <a class="scroll" href="#aboutme">About Me</a>
+        <a class="scroll" href="#projects">Projects</a>
+        <a class="scroll" href="#contacts">Contacts</a>
+      </div>
+    </header>
+    <section class="start" id="start">
       <img class="start-backround" src="./img/backround.jpg" />
       <div class="title">
         <h1 class="lplugins">LPlugins</h1>
@@ -33,7 +44,7 @@
       </div>
     </section>
     <div class="section-divider"></div>
-    <section class="aboutme">
+    <section class="aboutme" id="aboutme">
       <div class="title">About Me</div>
       <div class="info">
         <img class="me" src="./img/me.jpg" alt="" />
@@ -44,12 +55,12 @@
       </div>
     </section>
     <div class="section-divider"></div>
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="title">My Projects</div>
       <div class="cards"></div>
     </section>
     <div class="section-divider"></div>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="title">Contacts</div>
       <div class="icons">
         <a href="https://wa.me/351926558249"><img src="./icons/whatsapp.svg" alt="whatsapp" /></a>

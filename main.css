@@ -19,7 +19,7 @@ section > .title:first-of-type {
   font-weight: 700;
 }
 
-section:not(:first-child) {
+section:not(:first-child):not(:nth-child(2)) {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 70px;
@@ -53,7 +53,59 @@ section:not(:first-child) {
   text-decoration: none;
   font-weight: 500;
 }
-/* Start of Main Section Section */
+
+/* Start of Header Section */
+
+header {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  height: 8vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.right {
+  margin-right: 2%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float: right;
+}
+
+.left {
+  margin-left: 2%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float: left;
+}
+
+.darkheader {
+  color: white;
+  background-color: black;
+}
+
+.right a {
+  margin-left: 10px;
+  padding: 4px 5px 4px 5px;
+  text-decoration: none;
+  color: rgb(190, 190, 190);
+  border: 2px solid rgb(92, 92, 92);
+  border-radius: 2px;
+}
+
+.left h1 a {
+  color: rgb(190, 190, 190);
+  text-decoration: none;
+}
+/* End of Header Section */
+
+/* Start of Main Section */
 
 .start {
   position: relative;
