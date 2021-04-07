@@ -1,12 +1,3 @@
-@font-face {
-  font-family: "MinimoLight";
-  src: url("fonts/MinimoLight.otf") format("opentype");
-}
-
-.minimo {
-  font-family: "MinimoLight";
-}
-
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
