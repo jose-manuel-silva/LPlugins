@@ -103,6 +103,16 @@ header {
   color: rgb(190, 190, 190);
   text-decoration: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .right a {
+    font-size: 10px;
+  }
+  .left h1 a {
+    font-size: 25px;
+  }
+}
+
 /* End of Header Section */
 
 /* Start of Main Section */
@@ -231,6 +241,16 @@ header {
   font-weight: 500;
   max-height: 2.5em;
   max-width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+  }
+  .card:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
 }
 
 /* End of Projects Section */
