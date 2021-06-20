@@ -25,13 +25,15 @@ section:not(:first-child):not(:nth-child(2)) {
 }
 
 .more {
+  background: -webkit-gradient(linear, left top, left bottom, from(aqua), to(aqua));
   background: linear-gradient(to bottom, aqua 0%, aqua 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 2px 2px;
-  color: rgb(39, 39, 39);
+  color: #272727;
   text-decoration: none;
   font-weight: 500;
+  -webkit-transition: background-size 0.4s;
   transition: background-size 0.4s;
 }
 
@@ -40,19 +42,18 @@ section:not(:first-child):not(:nth-child(2)) {
 }
 
 .parenthesis {
-  color: rgb(39, 39, 39);
+  color: #272727;
   text-decoration: none;
   font-weight: 500;
 }
 
 /* Start of Header Section */
-
 header {
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   z-index: 1;
   height: 8vh;
@@ -64,16 +65,32 @@ header {
   margin-right: 2%;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   float: right;
+}
+
+.right a {
+  margin-left: 10px;
+  padding: 4px 5px 4px 5px;
+  text-decoration: none;
+  color: #bebebe;
+  border: 2px solid #5c5c5c;
+  border-radius: 2px;
 }
 
 .left {
   margin-left: 2%;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   float: left;
+}
+
+.left h1 a {
+  color: #bebebe;
+  text-decoration: none;
 }
 
 .darkheader {
@@ -81,50 +98,20 @@ header {
   background-color: black;
 }
 
-.right a {
-  margin-left: 10px;
-  padding: 4px 5px 4px 5px;
-  text-decoration: none;
-  color: rgb(190, 190, 190);
-  border: 2px solid rgb(92, 92, 92);
-  border-radius: 2px;
-}
-
-.left h1 a {
-  color: rgb(190, 190, 190);
-  text-decoration: none;
-}
-
-@media only screen and (max-width: 600px) {
-  .right a {
-    font-size: 10px;
-  }
-  .left h1 a {
-    font-size: 25px;
-  }
-}
-
 /* End of Header Section */
-
 /* Start of Main Section */
-
 .start {
   position: relative;
   text-align: center;
   height: 100vh;
 }
 
-.start-backround {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .start .title {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .start .title .lplugins {
@@ -134,7 +121,7 @@ header {
   letter-spacing: 1.8px;
   line-height: 55.2px;
   padding-bottom: 1rem;
-  color: rgb(134, 134, 134);
+  color: #868686;
 }
 
 .start .title .lplugins-subtitle {
@@ -144,16 +131,26 @@ header {
   letter-spacing: 1.8px;
   line-height: 15px;
   font-style: italic;
-  color: rgb(134, 134, 134);
+  color: #868686;
+}
+
+.start-backround {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* End of Main Section */
-
 /* Start of About Me Section */
-
 .info {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .info .name {
@@ -167,53 +164,64 @@ header {
 
 .info img {
   margin-right: 5%;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   height: 200px;
   width: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 2px solid aqua;
   border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .info img:hover {
-  transform: scale(1.1);
-}
-
-@media only screen and (max-width: 600px) {
-  .info {
-    flex-direction: column;
-  }
-  .info img {
-    margin-right: unset;
-    align-self: center;
-    margin-bottom: 30px;
-  }
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /* End of About Me Section */
-
 /* Start of Projects Section */
-
 .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1 2 30%;
-  flex-flow: row wrap;
-  flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 2 30%;
+          flex: 1 2 30%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
 }
 
 .card {
   border: 2px solid aqua;
   border-radius: 10px;
-  flex: 1 2 40%;
-  flex-flow: row wrap;
-  flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 2 40%;
+          flex: 1 2 40%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
   margin: 2%;
 }
 
 .card:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .card .title {
@@ -231,20 +239,8 @@ header {
   max-width: 90%;
 }
 
-@media only screen and (max-width: 600px) {
-  .cards {
-    flex-direction: column;
-  }
-  .card:not(:last-of-type) {
-    margin-right: 0;
-    margin-bottom: 5%;
-  }
-}
-
 /* End of Projects Section */
-
 /* Start of Contacts Section */
-
 .contacts {
   text-align: center;
 }
@@ -253,11 +249,48 @@ header {
   width: 10vmin;
   margin-left: 5%;
   margin-right: 5%;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .icons img:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  .right a {
+    font-size: 10px;
+  }
+  .left h1 a {
+    font-size: 25px;
+  }
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .info img {
+    margin-right: unset;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 30px;
+  }
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
 }
 
 /* End of Contacts Section */
+/*# sourceMappingURL=main.css.map */
