@@ -238,12 +238,6 @@ header {
   .cards {
     flex-direction: column;
   }
-  .card {
-    &:not(:last-of-type) {
-      margin-right: 0;
-      margin-bottom: 5%;
-    }
-  }
 }
 
 /* End of Contacts Section */
