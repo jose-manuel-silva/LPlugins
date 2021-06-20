@@ -209,14 +209,11 @@ header {
   flex-flow: row wrap;
   flex-direction: row;
   transition: transform 0.2s;
+  margin: 2%;
 }
 
 .card:hover {
   transform: scale(1.1);
-}
-
-.card:not(:last-of-type) {
-  margin-right: 5%;
 }
 
 .card .title {

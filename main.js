@@ -17,6 +17,9 @@ fetch(myRequest)
   });
 
 function addCard(name, description, link) {
+  if (description === null) {
+    description = "No description found.";
+  }
   var card_html = `<div class="card">
 <h1 class="title">${name}</h1>
 <h2 class="description">${description} <a class="parenthesis" href="${link}">(</a><a class="more" href="${link}">Go to Repo</a><a class="parenthesis" href="${link}">)</a></h2>
