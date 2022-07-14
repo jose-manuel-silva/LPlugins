@@ -1,4 +1,4 @@
-const myRequest = new Request("https://api.github.com/users/Jose-LolG0D/repos");
+const myRequest = new Request("https://api.github.com/users/jose-manuel-silva/repos");
 
 fetch(myRequest)
   .then((res) => {
